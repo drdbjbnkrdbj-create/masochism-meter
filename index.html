@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقياس المازوخية الرقمي 3000 | The Ultimate Masochism Meter</title>
-    <!-- Tailwind CSS CDN for standalone browser page -->
+    <title>مقياس الولاء والتضحية لفخامة خطّاب 👑✨</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;900&family=Changa:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;900&family=Changa:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -19,29 +18,28 @@
                         changa: ['Changa', 'sans-serif'],
                     },
                     colors: {
-                        flame: {
-                            500: '#ff4757',
-                            600: '#e84118',
+                        gold: {
+                            400: '#f6e58d',
+                            500: '#f9ca24',
+                            600: '#f0932b',
                         },
-                        toxic: {
-                            500: '#a55eea',
-                            600: '#8854d0',
+                        royal: {
+                            900: '#0c0e1a',
+                            950: '#06070d',
                         }
                     },
                     animation: {
-                        'shake': 'shake 0.4s ease-in-out',
-                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'bounce-slight': 'bounceSlight 2s infinite',
+                        'crown': 'floatCrown 3s ease-in-out infinite',
+                        'pulse-gold': 'pulseGold 2s infinite',
                     },
                     keyframes: {
-                        shake: {
-                            '0%, 100%': { transform: 'translateX(0)' },
-                            '20%, 60%': { transform: 'translateX(-6px) rotate(-1deg)' },
-                            '40%, 80%': { transform: 'translateX(6px) rotate(1deg)' },
+                        floatCrown: {
+                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-8px) rotate(4deg)' },
                         },
-                        bounceSlight: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-6px)' },
+                        pulseGold: {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '0.8' },
                         }
                     }
                 }
@@ -54,152 +52,139 @@
             user-select: none;
             -webkit-user-select: none;
         }
-        .glow-effect {
-            box-shadow: 0 0 25px rgba(255, 71, 87, 0.35);
+        .gold-glow {
+            box-shadow: 0 0 35px rgba(249, 202, 36, 0.25);
         }
-        .toxic-glow {
-            box-shadow: 0 0 25px rgba(165, 94, 234, 0.35);
+        .royal-border {
+            border-image: linear-gradient(to right, #f9ca24, #eb4d4b, #f0932b) 1;
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06070d; }
+        ::-webkit-scrollbar-thumb { background: #222738; border-radius: 4px; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-rose-500 selection:text-white">
+<body class="bg-royal-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
 
-    <!-- Background decorative grids & lights -->
+    <!-- Ambient Royal Glows -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-rose-600/15 rounded-full blur-3xl"></div>
-        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse-gold"></div>
+        <div class="absolute top-1/2 -right-32 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
     </div>
 
     <!-- Header / Navbar -->
-    <header class="relative z-10 border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md px-6 py-4">
+    <header class="relative z-10 border-b border-amber-500/20 bg-slate-950/80 backdrop-blur-md px-6 py-4">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center text-xl shadow-lg shadow-rose-500/20 animate-bounce-slight">
-                    💀
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-amber-300 flex items-center justify-center text-2xl shadow-lg shadow-amber-500/20 animate-crown">
+                    👑
                 </div>
                 <div>
-                    <h1 class="font-changa text-lg font-bold tracking-tight text-white flex items-center gap-2">
-                        مقياس المازوخية <span class="text-xs font-alexandria font-normal px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30">الإصدار 3.0</span>
+                    <h1 class="font-changa text-lg sm:text-xl font-black tracking-tight text-white flex items-center gap-2">
+                        مقياس الولاء لفخامة خطّاب <span class="text-[11px] font-alexandria font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">الديوان الملكي 2026</span>
                     </h1>
-                    <p class="text-xs text-slate-400">كم تتحمل أسئلة غبية واستفزاز نفسي؟ 🤡</p>
+                    <p class="text-xs text-slate-400">هل تستحق شرف معرفتي وصداقتي؟ أجب بعناية، فالعواقب وخيمة! ⚖️</p>
                 </div>
             </div>
 
-            <!-- Controls (Sound + Troll Warning) -->
-            <div class="flex items-center gap-2">
-                <button id="soundToggle" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700/60 text-slate-300 transition text-sm flex items-center gap-1.5" title="تشغيل/كتم الصوت">
-                    <span id="soundIcon">🔊</span>
-                </button>
-                <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-950/60 border border-rose-800/50 text-rose-300 text-xs font-semibold">
-                    <span>⚠️</span>
-                    <span>لا يُنصح لأصحاب القلوب الهشة</span>
-                </div>
-            </div>
+            <!-- Sound Toggle -->
+            <button id="soundToggle" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-amber-500/30 text-amber-300 transition text-sm flex items-center gap-1.5" title="الصوت">
+                <span id="soundIcon">🔊</span>
+            </button>
         </div>
     </header>
 
     <!-- Main Container -->
-    <main class="relative z-10 max-w-3xl w-full mx-auto p-4 sm:p-6 flex-1 flex flex-col justify-center">
+    <main class="relative z-10 max-w-2xl w-full mx-auto p-4 sm:p-6 flex-1 flex flex-col justify-center">
 
-        <!-- SCREEN 1: WELCOME SCREEN -->
-        <div id="welcomeScreen" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-10 backdrop-blur-xl text-center shadow-2xl space-y-6">
+        <!-- SCREEN 1: WELCOME & NAME ENTRY -->
+        <div id="welcomeScreen" class="bg-slate-900/90 border border-amber-500/30 rounded-3xl p-6 sm:p-10 backdrop-blur-xl text-center shadow-2xl space-y-6 gold-glow">
             <div class="inline-block relative">
-                <div class="text-6xl sm:text-7xl mb-2 animate-pulse">🤕🔥</div>
-                <span class="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full bg-rose-600 text-[11px] font-bold text-white shadow">معتمد من علماء الطفش</span>
+                <div class="text-7xl sm:text-8xl mb-1 animate-crown">👑</div>
+                <span class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 text-xs font-black shadow-lg">
+                    صادر بمرسوم سامٍ من خطّاب
+                </span>
             </div>
 
             <div class="space-y-3">
-                <h2 class="text-2xl sm:text-4xl font-extrabold font-changa text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-purple-300 to-amber-300">
-                    هل أنت مازوخي بما فيه الكفاية؟
+                <h2 class="text-2xl sm:text-4xl font-black font-changa text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-rose-400">
+                    أهلاً بك في اختبار استحقاق صداقتي!
                 </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
-                    هذا ليس اختبار ذكاء.. بل اختبار لقياس رغبتك العميقة في تعذيب نفسك وتحمل أغبى الأسئلة والمواقف المستفزة في الحياة اليومية! 
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+                    بما أن صداقتي ومرافقتي هي أسمى أمنياتك في هذه الحياة البائسة، فقد وضعت لك هذا الاختبار النرجسي الدقيق لقياس مدى إخلاصك وقدرتك على التضحية بكل ما تملك من أجلي! ✨
                 </p>
             </div>
 
-            <!-- Feature Pills -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center gap-2 text-slate-300">
-                    <span>⚡</span> <span>10 أسئلة ترفع الضغط</span>
+            <!-- Name Input Field -->
+            <div class="max-w-md mx-auto space-y-2 text-right">
+                <label for="userNameInput" class="block text-xs font-bold text-amber-300 font-changa">
+                    ✍️ أدخل اسمك الكامل لتسجيلك في سجل الرعايا:
+                </label>
+                <div class="relative">
+                    <input type="text" id="userNameInput" placeholder="اكتب اسمك هنا (مثلاً: أحمد، خالد...)" 
+                           class="w-full px-4 py-3.5 rounded-xl bg-slate-950/80 border-2 border-slate-700 focus:border-amber-400 focus:outline-none text-white text-sm text-right placeholder-slate-500 transition shadow-inner font-medium">
                 </div>
-                <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center gap-2 text-slate-300">
-                    <span>📊</span> <span>تحليل نفسي غير علمي أبداً</span>
-                </div>
-                <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center gap-2 text-slate-300">
-                    <span>📜</span> <span>شهادة مازوخية قابلة للمشاركة</span>
-                </div>
+                <p id="nameWarning" class="text-xs text-rose-400 font-semibold hidden text-right">⚠️ ألا تملك اسماً أيها النكرة؟! اكتب اسمك أولاً للدخول!</p>
             </div>
 
             <!-- Start Button -->
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <button onclick="startQuiz()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-500 hover:from-rose-500 hover:to-amber-400 text-white font-bold text-lg shadow-lg shadow-rose-600/30 transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-2">
-                    <span>ابدأ التعذيب الآن</span>
+            <div class="pt-3">
+                <button onclick="submitNameAndStart()" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-yellow-400 to-rose-500 hover:from-amber-400 hover:to-rose-400 text-slate-950 font-black text-base sm:text-lg shadow-xl shadow-amber-500/25 transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-2 mx-auto">
+                    <span>خوض اختبار الولاء لفخامة خطّاب</span>
                     <span>←</span>
-                </button>
-                <button onclick="trollRefuse()" id="refuseBtn" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-medium text-sm transition">
-                    أنا إنسان طبيعي، طلّعني!
                 </button>
             </div>
 
-            <p id="trollMsg" class="text-xs text-amber-400 font-medium h-4 transition-all opacity-0"></p>
+            <div class="pt-2 flex items-center justify-center gap-4 text-xs text-slate-400">
+                <span>⚖️ 10 أسئلة مصيرية</span>
+                <span>•</span>
+                <span>🚫 خيارات المنطق ممنوعة</span>
+                <span>•</span>
+                <span>📜 مرسوم رسمي ختامي</span>
+            </div>
         </div>
 
-        <!-- SCREEN 2: ACTIVE QUIZ SCREEN (Hidden initially) -->
+        <!-- SCREEN 2: ACTIVE QUIZ SCREEN -->
         <div id="quizScreen" class="hidden space-y-5">
 
             <!-- Real-time Status Card -->
             <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 backdrop-blur-xl shadow-lg">
                 <div class="flex items-center justify-between mb-3">
                     <div class="flex items-center gap-2">
-                        <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30 font-changa">
-                            سؤال <span id="currentQNum">1</span> من <span id="totalQNum">10</span>
+                        <span class="text-xs font-bold px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 font-changa">
+                            سؤال <span id="currentQNum">1</span> من 10
                         </span>
-                        <span id="quipBadge" class="text-xs text-slate-400 hidden sm:inline-block">🤔 فكر كويس.. أو لا تفكر!</span>
+                        <span class="text-xs text-slate-400 hidden sm:inline-block">
+                            الرعية: <strong id="userDisplayBadge" class="text-amber-400 font-changa">المستخدم</strong>
+                        </span>
                     </div>
 
                     <div class="flex items-center gap-3">
                         <div class="text-right">
-                            <div class="text-[11px] text-slate-400 font-medium">مؤشر الألم الحالي</div>
-                            <div class="text-sm font-bold text-rose-400 font-changa" id="liveScorePct">0% مازوخية</div>
+                            <div class="text-[11px] text-slate-400 font-medium">مؤشر الولاء لخطّاب</div>
+                            <div class="text-sm font-black text-amber-400 font-changa" id="liveScorePct">0% ولاء</div>
                         </div>
-                        <div class="w-9 h-9 rounded-xl bg-rose-950/60 border border-rose-800/60 flex items-center justify-center text-lg animate-pulse" id="liveFaceEmoji">
-                            🙂
+                        <div class="w-9 h-9 rounded-xl bg-amber-950/60 border border-amber-500/40 flex items-center justify-center text-lg animate-pulse" id="liveFaceEmoji">
+                            👑
                         </div>
                     </div>
                 </div>
 
                 <!-- Progress Bar -->
-                <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5 border border-slate-700/50">
-                    <div id="progressBar" class="h-full bg-gradient-to-r from-purple-500 via-rose-500 to-amber-500 rounded-full transition-all duration-500 w-[10%]"></div>
+                <div class="w-full h-2.5 bg-slate-950 rounded-full overflow-hidden p-0.5 border border-slate-800">
+                    <div id="progressBar" class="h-full bg-gradient-to-r from-rose-500 via-amber-500 to-yellow-400 rounded-full transition-all duration-500 w-[10%]"></div>
                 </div>
             </div>
 
             <!-- Question Card -->
-            <div id="questionContainer" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl space-y-6 relative overflow-hidden transition-all duration-300">
-                <!-- Watermark Icon -->
-                <div class="absolute -bottom-6 -left-6 text-9xl opacity-5 pointer-events-none select-none">
-                    🎯
-                </div>
-
+            <div id="questionContainer" class="bg-slate-900/90 border border-amber-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl space-y-6 relative overflow-hidden transition-all duration-300">
                 <div class="space-y-2">
-                    <div class="text-xs text-purple-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                        <span class="inline-block w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
-                        <span id="questionCategory">موقف يومي غبي</span>
+                    <div class="text-xs text-amber-400 font-bold uppercase tracking-wider flex items-center gap-1.5 font-changa">
+                        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                        <span id="questionCategory">موقف ملكي</span>
                     </div>
-                    <h3 id="questionText" class="text-xl sm:text-2xl font-bold font-changa text-white leading-snug">
-                        لو دخلت غرفتك في الليل ولقيت الباب مفتوح واللمبة طافية، وش أول ردة فعل؟
+                    <h3 id="questionText" class="text-lg sm:text-xl font-black font-changa text-white leading-snug">
+                        نص السؤال يظهر هنا...
                     </h3>
                 </div>
 
@@ -208,98 +193,106 @@
                     <!-- Options injected via JS -->
                 </div>
 
-                <!-- Sarcastic Feedback Alert Box -->
-                <div id="feedbackBox" class="hidden p-3.5 rounded-xl border text-xs sm:text-sm font-medium flex items-center justify-between transition-all">
-                    <div class="flex items-center gap-2">
-                        <span id="feedbackIcon" class="text-lg"></span>
-                        <span id="feedbackText"></span>
+                <!-- Feedback Alert Box -->
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-xs sm:text-sm font-medium flex items-center justify-between transition-all">
+                    <div class="flex items-center gap-2.5">
+                        <span id="feedbackIcon" class="text-2xl"></span>
+                        <span id="feedbackText" class="leading-relaxed font-semibold"></span>
                     </div>
-                    <button onclick="nextQuestion()" class="px-4 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition flex items-center gap-1">
+                    <button onclick="nextQuestion()" class="px-5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-black text-xs transition flex items-center gap-1 shrink-0">
                         <span>التالي</span>
                         <span>←</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Sarcastic Bottom Ticker -->
+            <!-- Sarcastic Quote -->
             <div class="flex items-center justify-between px-2 text-xs text-slate-500">
-                <span id="bottomTrollQuote">💡 نصيحة: لا تراجع إجاباتك، كلها سيئة.</span>
-                <span id="elapsedTime">⏱️ 0:00 ضائعة من عمرك</span>
+                <span id="bottomTrollQuote">👑 حكم خطّابية: الاعتراض على خطّاب جريمة لا تغتفر.</span>
+                <span id="elapsedTime">⏱️ 0:00 من وقتك الرخيص</span>
             </div>
         </div>
 
-        <!-- SCREEN 3: RESULT CERTIFICATE (Hidden initially) -->
+        <!-- SCREEN 3: ROYAL CERTIFICATE DECREE -->
         <div id="resultScreen" class="hidden space-y-6">
-            <div class="bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-rose-500/40 rounded-3xl p-6 sm:p-10 backdrop-blur-2xl shadow-2xl relative overflow-hidden glow-effect text-center space-y-6">
+            <div id="certificateCard" class="bg-gradient-to-b from-slate-900 via-royal-950 to-slate-950 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-10 backdrop-blur-2xl shadow-2xl relative overflow-hidden gold-glow text-center space-y-6">
                 
-                <!-- Confetti Canvas -->
                 <canvas id="confettiCanvas" class="absolute inset-0 pointer-events-none z-0"></canvas>
 
-                <!-- Stamp / Badge -->
+                <!-- Royal Badge -->
                 <div class="relative z-10 flex flex-col items-center">
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-rose-600 via-purple-600 to-amber-500 p-1 shadow-xl animate-bounce-slight">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-amber-400 via-rose-500 to-yellow-300 p-1 shadow-2xl animate-crown">
                         <div class="w-full h-full bg-slate-950 rounded-[22px] flex flex-col items-center justify-center">
                             <span class="text-4xl sm:text-5xl" id="resultEmoji">👑</span>
-                            <span class="text-[11px] font-bold text-amber-300 font-changa mt-1" id="resultGradeBadge">درجة A+</span>
+                            <span class="text-[10px] font-black text-amber-300 font-changa mt-1" id="resultGradeBadge">مرسوم سامٍ</span>
                         </div>
                     </div>
 
                     <div class="mt-4 space-y-1">
-                        <p class="text-xs uppercase tracking-widest text-rose-400 font-semibold font-changa">شهادة إثبات المازوخية الرسمية</p>
-                        <h2 class="text-2xl sm:text-4xl font-black font-changa text-white" id="resultTitle">
-                            مازوخي أسطوري مع مرتبة الشرف 💀
+                        <p class="text-xs uppercase tracking-widest text-amber-400 font-bold font-changa">الديوان الملكي لصاحب الفخامة خطّاب</p>
+                        <h2 class="text-2xl sm:text-3xl font-black font-changa text-white" id="resultTitle">
+                            صك الولاء لفخامة خطّاب 👑
                         </h2>
+                        <p class="text-xs text-slate-300 font-medium">
+                            الصادر بحق الرعية: <strong id="resultUserName" class="text-amber-300 text-sm font-changa">فلان</strong>
+                        </p>
                     </div>
                 </div>
 
-                <!-- Score Meter Widget in Result -->
-                <div class="relative z-10 bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 max-w-md mx-auto space-y-3">
+                <!-- Final Score Meter -->
+                <div class="relative z-10 bg-slate-900/80 border border-amber-500/30 rounded-2xl p-5 max-w-md mx-auto space-y-3">
                     <div class="flex items-center justify-between">
-                        <span class="text-xs text-slate-400 font-medium">مستوى المازوخية الكلي:</span>
-                        <span class="text-2xl font-black font-changa text-rose-400" id="finalScorePct">92%</span>
+                        <span class="text-xs text-slate-400 font-medium">نسبة الولاء والتضحية لخطّاب:</span>
+                        <span class="text-3xl font-black font-changa text-amber-400" id="finalScorePct">95%</span>
                     </div>
 
                     <div class="w-full h-3 bg-slate-950 rounded-full overflow-hidden p-0.5 border border-slate-700">
-                        <div id="finalScoreBar" class="h-full bg-gradient-to-r from-yellow-500 via-rose-500 to-purple-600 rounded-full w-0 transition-all duration-1000"></div>
+                        <div id="finalScoreBar" class="h-full bg-gradient-to-r from-rose-500 via-amber-500 to-yellow-300 rounded-full w-0 transition-all duration-1000"></div>
                     </div>
 
                     <div class="flex justify-between text-[11px] text-slate-400 pt-1">
-                        <span>إنسان سوي (0%)</span>
-                        <span>مستفز عادي (50%)</span>
-                        <span>مدمن جلد ذات (100%)</span>
+                        <span>خائن منبوذ (0%)</span>
+                        <span>تحت التأهيل (50%)</span>
+                        <span>عبد الصداقة المخلص (100%)</span>
                     </div>
                 </div>
 
-                <!-- Detailed Psychological Analysis -->
-                <div class="relative z-10 space-y-4 max-w-xl mx-auto text-right">
-                    <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
-                        <h4 class="text-xs font-bold text-amber-400 flex items-center gap-1.5 font-changa">
-                            <span>🩺</span> <span>التشخيص السريري الساخر:</span>
+                <!-- Decree Text -->
+                <div class="relative z-10 space-y-3 max-w-lg mx-auto text-right">
+                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-amber-500/20 space-y-1.5">
+                        <h4 class="text-xs font-bold text-amber-300 flex items-center gap-1.5 font-changa">
+                            <span>📜</span> <span>المرسوم الملكي الرسمي:</span>
                         </h4>
-                        <p id="diagnosisText" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                            أنت شخص يعشق التحديق في الأخطار وتكرار نفس الأخطاء مراراً وتكراراً على أمل نتيجة مختلفة! لو نزل مطر نار، غالباً بتطلع تتشمس!
+                        <p id="decreeText" class="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                            نص التقييم والتشخيص النرجسي...
                         </p>
                     </div>
 
-                    <div class="p-4 rounded-xl bg-rose-950/40 border border-rose-900/50 space-y-1.5">
-                        <h4 class="text-xs font-bold text-rose-400 flex items-center gap-1.5 font-changa">
-                            <span>💡</span> <span>توصية طبيب الطفش:</span>
+                    <div class="p-4 rounded-2xl bg-rose-950/30 border border-rose-500/30 space-y-1.5">
+                        <h4 class="text-xs font-bold text-rose-300 flex items-center gap-1.5 font-changa">
+                            <span>⚠️</span> <span>الواجبات المفروضة عليك تجاه خطّاب:</span>
                         </h4>
-                        <p id="prescriptionText" class="text-xs sm:text-sm text-rose-200 leading-relaxed">
-                            ابتعد عن شواحن الجوال المكسورة، ولا تنتظر رسالة من شخص ساحب عليك، واشرب ماء ونام بدري.
+                        <p id="dutiesText" class="text-xs sm:text-sm text-rose-200 leading-relaxed font-medium">
+                            التوصيات والواجبات...
                         </p>
                     </div>
                 </div>
 
-                <!-- Action Buttons -->
+                <!-- Sharing & Actions -->
                 <div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                    <button onclick="shareResult()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-purple-600/30 transition flex items-center justify-center gap-2">
-                        <span>📋</span>
-                        <span id="shareBtnText">انسخ نتيجتك وفشخر فيها</span>
+                    <!-- WhatsApp Direct Share -->
+                    <button onclick="shareWhatsApp()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 hover:to-green-400 text-white font-black text-xs sm:text-sm shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2">
+                        <span>📲</span>
+                        <span>إرسال النتيجة في الواتساب</span>
                     </button>
-                    <button onclick="restartQuiz()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-sm transition flex items-center justify-center gap-2">
-                        <span>🔄</span>
-                        <span>أبي أتعذب مرة ثانية (إعادة)</span>
+                    <!-- Copy Link -->
+                    <button onclick="copyShareText()" class="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                        <span>📋</span>
+                        <span id="copyBtnText">نسخ النتيجة والتفاخر بها</span>
+                    </button>
+                    <!-- Retake -->
+                    <button onclick="restartQuiz()" class="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-bold text-xs transition">
+                        🔄 محاولة استجداء جديدة
                     </button>
                 </div>
             </div>
@@ -308,14 +301,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="relative z-10 border-t border-slate-900 bg-slate-950/80 px-6 py-4 text-center text-xs text-slate-400">
-        <p>صُمم هذا الموقع بهدف الترفيه والتسلية والضحك فقط 🌶️ • جميع الحقوق محفوظة لضحايا الأسئلة الغبية 2026</p>
+    <footer class="relative z-10 border-t border-slate-900 bg-slate-950/90 px-6 py-4 text-center text-xs text-slate-400">
+        <p>جميع الحقوق محفوظة ومملوكة حصرياً لفخامة خطّاب 👑✨ • أي اعتراض يُحال للجهات المعنية</p>
     </footer>
 
-    <!-- Sound & Game Logic Script -->
+    <!-- Sound & Logic Script -->
     <script>
-        // Web Audio Synthesizer (Zero External Dependencies)
-        class SoundEngine {
+        // Web Audio Synthesizer
+        class RoyalSoundEngine {
             constructor() {
                 this.ctx = null;
                 this.enabled = true;
@@ -325,9 +318,7 @@
                     const AudioContext = window.AudioContext || window.webkitAudioContext;
                     this.ctx = new AudioContext();
                 }
-                if (this.ctx.state === 'suspended') {
-                    this.ctx.resume();
-                }
+                if (this.ctx.state === 'suspended') this.ctx.resume();
             }
             playTone(freq, type = 'sine', duration = 0.15, vol = 0.15) {
                 if (!this.enabled) return;
@@ -345,180 +336,174 @@
                     osc.stop(this.ctx.currentTime + duration);
                 } catch(e) {}
             }
-            clickSound() {
-                this.playTone(450, 'triangle', 0.08, 0.12);
+            royalDing() {
+                this.playTone(659.25, 'triangle', 0.15, 0.15);
+                setTimeout(() => this.playTone(880, 'triangle', 0.25, 0.15), 100);
             }
-            masochistSound() {
-                // Sarcastic low buzzing sound
+            disloyalBuzzer() {
                 if (!this.enabled) return;
                 try {
                     this.init();
                     const osc = this.ctx.createOscillator();
                     const gain = this.ctx.createGain();
                     osc.type = 'sawtooth';
-                    osc.frequency.setValueAtTime(160, this.ctx.currentTime);
-                    osc.frequency.exponentialRampToValueAtTime(80, this.ctx.currentTime + 0.3);
+                    osc.frequency.setValueAtTime(140, this.ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(70, this.ctx.currentTime + 0.35);
                     gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
-                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.3);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.35);
                     osc.connect(gain);
                     gain.connect(this.ctx.destination);
                     osc.start();
-                    osc.stop(this.ctx.currentTime + 0.3);
+                    osc.stop(this.ctx.currentTime + 0.35);
                 } catch(e) {}
             }
             fanfare() {
-                // Victory / completion melody
                 if (!this.enabled) return;
-                const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99];
-                notes.forEach((freq, idx) => {
-                    setTimeout(() => this.playTone(freq, 'sine', 0.25, 0.15), idx * 100);
+                const fanfareNotes = [392, 523.25, 659.25, 783.99, 1046.50];
+                fanfareNotes.forEach((f, i) => {
+                    setTimeout(() => this.playTone(f, 'triangle', 0.3, 0.18), i * 120);
                 });
             }
         }
 
-        const sound = new SoundEngine();
+        const sound = new RoyalSoundEngine();
         function toggleSound() {
             sound.enabled = !sound.enabled;
-            const icon = document.getElementById('soundIcon');
-            icon.textContent = sound.enabled ? '🔊' : '🔇';
+            document.getElementById('soundIcon').textContent = sound.enabled ? '🔊' : '🔇';
         }
 
-        // Quiz Questions Data (10 hilariously stupid/masochistic questions)
-        const questions = [
-            {
-                category: "رعب الغرفة 👻",
-                text: "لو دخلت غرفتك في الليل ولقيت الباب مفتوح واللمبة طافية، وش أول ردة فعل؟",
-                options: [
-                    { text: "أدخل عادي وأسوي نفسي قوي والقلب يرجف", score: 20, comment: "شجاعة كذابة بس تمشي الحال! 😂" },
-                    { text: "أركض للسرير وأغطي رجلي فوراً عشان الوحش ما يسحبني", score: 10, comment: "بروتوكول السلامة المعتمد دولياً 🛌" },
-                    { text: "أسأل الظلام: 'مين هنا؟' وأنتظر يرد علي", score: 80, comment: "إذا رد عليك لا تلوم إلا نفسك! 💀" },
-                    { text: "أقفل الباب على نفسي من برا وأنام في الصالة للأبد", score: 100, comment: "قمة دراما الهروب المازوخي! 🎪" }
-                ]
-            },
-            {
-                category: "فيزياء السرير 📱",
-                text: "إذا طاح جوالك على وجهك وأنت متمدد بالسرير، وش تسوي أول شي؟",
-                options: [
-                    { text: "أفرك خشمي وأسوي نفسي ما صار شي عشان كرامتي", score: 30, comment: "كرامتك أصلاً طاحت مع الجوال 🤕" },
-                    { text: "أعتذر للجوال عشان ما يزعل وتنكسر شاشته", score: 85, comment: "علاقة سامة مع التكنولوجيا! 💔" },
-                    { text: "أرميه على وجهي مرة ثانية عشان أوازن الألم في الخدين", score: 100, comment: "هنا مازوخية فاخرة لا تشوبها شائبة! 👑" },
-                    { text: "أسب نيوتن ومكتشف الجاذبية وأكمل سكرول", score: 40, comment: "نيوتن مسكين وش دخله في سدحتك؟ 🍎" }
-                ]
-            },
-            {
-                category: "معركة الصباح ⏰",
-                text: "لو رن المنبه الساعة 6:00 صباحاً، ما هي خطتك الإستراتيجية العظيمة؟",
-                options: [
-                    { text: "أصحى بنشاط وأبتسم للحياة (كذب خالص)", score: 95, comment: "أنت كاذب أو كائن فضائي يعشق المعاناة! 👽" },
-                    { text: "غفوة 5 دقائق كل 3 دقائق لين تصير 8:30 وأداوم مرعوب", score: 100, comment: "مازوخية يومية معتمدة لكل الموظفين والطلاب! 🫠" },
-                    { text: "أطفي المنبه وأقول الرزق على الله وأرجع أنام", score: 10, comment: "راحة بال تحسد عليها! 😴" },
-                    { text: "أخاصم المنبه: 'ليش تسوي فيني كذا؟' ثم أنام", score: 60, comment: "المنبه يؤدي واجبه وأنت تظلمه 🤷‍♂️" }
-                ]
-            },
-            {
-                category: "أزمة النظارات 👓",
-                text: "هل سبق وبحثت عن نظارتك أو جوالك وهو بين يديك؟",
-                options: [
-                    { text: "نعم، وشغلت فلاش الجوال عشان أدور الجوال!", score: 100, comment: "العبقرية في أبهى صورها التعذيبية! 🔦" },
-                    { text: "سألت اللي جنبي وهو يناظرني بنظرة شفقة واستحقار", score: 75, comment: "نظرة تسوى ألف كلمة عتاب! 🤡" },
-                    { text: "أبداً، أنا إنسان كامل التركيز والذكاء", score: 0, comment: "كذاب! حتى ألبرت أينشتاين سواها! 🤨" },
-                    { text: "ما ألبس نظارات، بس دورت عليها تضامناً مع المجتمع", score: 90, comment: "تضامن مازوخي فريد من نوعه! 🤝" }
-                ]
-            },
-            {
-                category: "كرسي العذاب 🦷",
-                text: "لو طبيب الأسنان قال لك: 'إذا حسيت بألم ارفع يدك'، وحسيت بشرارة كهرباء بعصبك؟",
-                options: [
-                    { text: "أرفع يدي ورجلي وأصرخ فوراً", score: 10, comment: "ردة فعل الإنسان العاقل الطبيعي 👍" },
-                    { text: "أكتم الدمعة وأقول 'امم ممم' عشان ما أحرجه مسكين", score: 85, comment: "تضحي بعصبك عشان مشاعر الدكتور؟ مازوخي رسمي! 🥲" },
-                    { text: "أبتسم وأقوله: 'كمّل ولا عليك.. الألم ينظف الروح'", score: 100, comment: "تحتاج حجز فوري في مصحة الروقان! 🪚" },
-                    { text: "أغمض عيوني وأتظاهر أني في جزيرة هاواي", score: 50, comment: "هروب روحي في عيادة الأسنان! 🏝️" }
-                ]
-            },
-            {
-                category: "هندسة الشواحن 🔌",
-                text: "شاحن جوالك ما يشحن إلا إذا لفيته بزاوية 73 درجة تحت مخدة وكتبت عليه تعويذة؟",
-                options: [
-                    { text: "أشتري شاحن أصلي جديد وأرتاح", score: 0, comment: "شخصية واعية ترفض الذل.. ممل جداً! 🥱" },
-                    { text: "أقعد ماسكه بيدي نص ساعة وأتنفس بهدوء عشان ما يفصل", score: 100, comment: "مازوخية تقنية من الدرجة الأولى! تمثال لصبرك! 🗿" },
-                    { text: "أحط عليه كتب ثقيلة ودعاء الوالدين وأتمنى يكمل للـ 20%", score: 70, comment: "إيمان عميق بالحلول الترقيعية! 📚" },
-                    { text: "أهاوش الشاحن وأقوله: 'ترى والله أرميك' وأرجع أثبته", score: 60, comment: "تهديد وهمي والشاحن يدري أنك ضعيف 🔌" }
-                ]
-            },
-            {
-                category: "الزر المحظور 🔴",
-                text: "الزر الأحمر الكبير.. (تنبيه شديد: إياك أن تضغطه أبداً!)",
-                options: [
-                    { text: "أضغطه فوراً بدون أدنى تردد أو تأخير!", score: 100, comment: "الفضول المازوخي الذي دمر كوكب الأرض! 💥" },
-                    { text: "أجلس أطالع فيه 10 ثواني بنزاع داخلي ثم أضغطه", score: 80, comment: "عارف إنه غلط ومصر تعذب ضميرك! 🤦" },
-                    { text: "ألتزم بالتعليمات ولا ألمسه أبداً", score: 10, comment: "مطيع ومثالي بزيادة.. وين الحماس؟ 😴" },
-                    { text: "أخلي شخص ثاني يضغطه عشان أشوف وش يصير فيه", score: 60, comment: "خبث ذكي بس فيه نسبة نذالة! 😈" }
-                ]
-            },
-            {
-                category: "مطعم الصبر 🍽️",
-                text: "لو طلبت وجبة وانتظرت ساعة وجاب لك الجرسون الطلب كله غلط وبارد؟",
-                options: [
-                    { text: "أرجعه باحترام وأطلب طلبي الصحيح", score: 15, comment: "حقك المشروع ولا غبار عليك 🍔" },
-                    { text: "آكله وأنا ساكت وأقنع نفسي إنه يمكن لذيذ كذا", score: 90, comment: "تنازل مازوخي عن أبسط حقوق المعدة! 🫠" },
-                    { text: "أعطيه إكرامية وأعتذر له أن طلبي تعبه", score: 100, comment: "هذا تعدّى مرحلة المازوخية ودخل عالم القداسة الكوميدية! 😇" },
-                    { text: "أصوره سناب وأكتب: 'أحلى تجربة' وأنا مقهور", score: 75, comment: "نفاق سوشال ميديا مع عصرة ألم! 📸" }
-                ]
-            },
-            {
-                category: "شمس الظهيرة ☀️",
-                text: "شرب كاسة شاي كرك حار في عز قايلة الصيف في الرياض وأنت لابس جاكيت؟",
-                options: [
-                    { text: "أكبر متعة وانتعاش في الكون!", score: 100, comment: "أنت بركان متنقل يتلذذ بالانصهار! 🌋" },
-                    { text: "مستحيل، وش مجنون أنا؟", score: 5, comment: "منطقي وطبيعي جداً 🧊" },
-                    { text: "فقط إذا المكيف طافي والدريشة مفتوحة", score: 95, comment: "سونا مجانية مع شاي.. مازوخي محترف! 🧖‍♂️" },
-                    { text: "أفضل ينسكب علي مباشرة عشان أختصر الوقت", score: 90, comment: "اختصار تعذيبي سريع! ☕" }
-                ]
-            },
-            {
-                category: "الاعتراف الأخير 🏁",
-                text: "السؤال الأخير: لماذا واصلت الإجابة على هذه الأسئلة التافهة حتى الآن؟",
-                options: [
-                    { text: "لأني أحب جلد الذات والفضول قاتلني!", score: 100, comment: "اعتراف صريح يستحق التحية! 🎖️" },
-                    { text: "أبي أشوف شهادتي وأرسلها لقروب الواتساب", score: 60, comment: "التباهي بالمعاناة فن لا يتقنه الجميع! 📱" },
-                    { text: "كنت أحسب الاختبار فيه جائزة نقدية", score: 40, comment: "الجائزة الوحيدة هي معرفة حقيقتك! 💰" },
-                    { text: "عشان أثبت للمطور إني صبور وما أستسلم", score: 85, comment: "المطور يحييك ويعتذر عن إضاعة وقتك! ❤️" }
-                ]
-            }
-        ];
-
-        // State Management
+        // Quiz State
+        let userName = "";
         let currentQuestionIdx = 0;
         let userScores = [];
         let timerInterval = null;
         let secondsPassed = 0;
 
-        // Troll Refusal on Welcome Screen
-        let refuseClicks = 0;
-        const trollMessages = [
-            "متأكد؟ ما ودك تعرف الحقيقة المرة؟ 👀",
-            "ترى الزر معلق.. ما فيه مفر! 🏃‍♂️",
-            "خايف تكتشف إنك مازوخي رقم 1؟ 🤡",
-            "ما فيه خروج، يا تكمل يا تكمل! 🔒"
+        // 10 Narcissistic Questions about Khattab
+        const getQuestions = (name) => [
+            {
+                category: "معضلة الفاتورة 🍽️",
+                text: `خرجت مع فخامة خطّاب لمطعم فاخر، وجاء الحساب على الطاولة.. وش التصرف الصحيح يا ${name}؟`,
+                options: [
+                    { text: "أدفعها كاملة وأنا أبتسم، لأن شرف الجلوس مع خطّاب لا يقدّر بثمن!", score: 100, quip: "إجابة تدل على وعي تام بمكانة خطّاب السامية! 👑" },
+                    { text: "أقترح نقسم الفاتورة بالنص.", score: 0, quip: "وقاحة وجحود غير مسبوق! خطّاب يدفع نص وأنت معه؟! 🚫" },
+                    { text: "أدفع الفاتورة وأعطي خطّاب إكرامية فوقها تقديراً لوقته الثمين.", score: 100, quip: "أحسنت! أدب ملوكي رفيع المستوى 🪙" },
+                    { text: "أعتذر لخطّاب لأني ما سددتها قبل ما ينزل الأكل أصلاً.", score: 90, quip: "اعتذار مقبول ولكن لا تكرر هذا التقصير! ⚠️" }
+                ]
+            },
+            {
+                category: "اتصال الفجر 📱",
+                text: `دق عليك خطّاب الساعة 3:45 الفجر بدون أي سبب لأنه طفشان وماله خلق ينام، وش تسوي يا ${name}؟`,
+                options: [
+                    { text: "أرد من أول رنّة وأقول: 'لبّيك يا صاحب الفخامة، أمرني!'", score: 100, quip: "خادم مخلص ومستعد للتضحية بنومه فوراً! 🫡" },
+                    { text: "أسوي الجوال صامت وأكمل نوم لأني وراي دوام.", score: 0, quip: "دوامك أهم من طفش خطّاب؟! تم تسجيل خيانة عظمى! ❌" },
+                    { text: "أصحى مرعوب وأحمد ربي إنه تذكرني أنا بالذات في وقت طفشه!", score: 95, quip: "تقدير عالي للنعمة التي هبطت عليك فجراً 😇" },
+                    { text: "أرسل له اعتذار على الواتساب لأني تأخرت ثانيتين في الرد.", score: 85, quip: "حس وطني راقي ينم عن الخوف والولاء 🙇‍♂️" }
+                ]
+            },
+            {
+                category: "الرأي الصائب دائماً 🧠",
+                text: `لو اختلفنا في الرأي وقال خطّاب إن 'الشمس تشرق من الغرب'، وش موقفك يا ${name}؟`,
+                options: [
+                    { text: "خطّاب دائماً على حق، وحتى الشمس المفروض تغير مسارها عشانه!", score: 100, quip: "إيمان مطلق بالمعجزات الخطّابية! ☀️" },
+                    { text: "أناقشه بالمنطق والعلم وأثبت إنه غلطان.", score: 0, quip: "علم ومنطق مع خطّاب؟! هل جُننت؟! خيار مرفوض تماماً 🛑" },
+                    { text: "أعتذر فوراً عن غبائي وأتبنى رأيه كحقيقة كونية مطلقة.", score: 95, quip: "تصحيح سريع للمسار وإنقاذ لعقلك من الجهل 👍" },
+                    { text: "أصفق لحكمته وأطلب منه يكتب كتاب في علم الفلك.", score: 90, quip: "نفاق فاخر يستحق الثناء والتشجيع 👏" }
+                ]
+            },
+            {
+                category: "أزمة الشاحن 🔌",
+                text: `جوالك طافي 1% ومحتاج مكالمة طارئة، وخطّاب جواله 98% وطلب سلك الشاحن حقك، وش تسوي يا ${name}؟`,
+                options: [
+                    { text: "أعطيه الشاحن فوراً مع اعتذار حار، فـ 2% نقص في جوال خطّاب كارثة وطنية!", score: 100, quip: "تضحية بطولية تليق بمقام المعالي 🔋" },
+                    { text: "أقوله 'استنى دقيقة بس أشحن مكالمة طارئة'.", score: 0, quip: "أنانية مقيتة! مكالمتك التافهة أهم من شاحن خطّاب؟! 🤦‍♂️" },
+                    { text: "أطفي جوالي نهائياً وأطلب له باور بانك فوري مع باقة ورد.", score: 100, quip: "كرم حاتمي موجه للجهة الصحيحة 💐" },
+                    { text: "أعطيه شاحني وجوالي وإحداثيات بيتي تضامناً معه.", score: 90, quip: "ولاء أعمى لا تشوبه شائبة 👑" }
+                ]
+            },
+            {
+                category: "بروتوكول السيارة 🚗",
+                text: `ركبت مع فخامة خطّاب في سيارته.. ما هو دورك الأساسي في الرحلة يا ${name}؟`,
+                options: [
+                    { text: "أفتح له الباب، أضبط التكييف، وأمدح ذوقه الموسيقي العبقري طول الطريق.", score: 100, quip: "مساعد شخصي مثالي يستحق الركوب في المقعد الأمامي 🎵" },
+                    { text: "أطلب أغير الأغنية أو أرفع التكييف.", score: 0, quip: "تغيير الأغنية في سيارة خطّاب عقوبتها الإنزال بالدائري فوراً! 🚷" },
+                    { text: "أتنفس بهدوء عشان ما أستهلك الأكسجين المخصص لخطّاب.", score: 95, quip: "مراعاة صحية فائقة لمقام الفخامة 🫁" },
+                    { text: "أحمد ربي في سري وجهري على شرف هذه النزهة التاريخية.", score: 90, quip: "امتنان روحي عميق ومبارك 🤲" }
+                ]
+            },
+            {
+                category: "عطف السوشال ميديا 📸",
+                text: `تكرّم خطّاب وحط لك لايك على ستوري في إنستغرام أو سناب، وش التصرف الرسمي يا ${name}؟`,
+                options: [
+                    { text: "أصور الشاشة، أطبعها، وأبروزها في الصالة كإنجاز تاريخي للعائلة!", score: 100, quip: "برواز ذهبي وتستاهل حفلة وعشاء للحي كله! 🖼️" },
+                    { text: "أتجاهل الموضوع أو أرد بريأكشن عادي.", score: 0, quip: "عدم تقدير للعطف الإمبراطوري! بلوك أسبوعين للتأديب ⛔" },
+                    { text: "أعتزل السوشال ميديا نهائياً لأنني وصلت لقمة طموحي البشري.", score: 95, quip: "قرار حكيم، فما بعد لايك خطّاب أي طموح! 🌟" },
+                    { text: "أرسل برقية شكر وعرفان لفخامته على نزوله لمستواي.", score: 90, quip: "تواضع متبادل مع فارق المقامات 💌" }
+                ]
+            },
+            {
+                category: "هدية عيد الميلاد 🎁",
+                text: `في يوم ميلاد فخامة خطّاب، وش الهدية المناسبة لمقامه السامي يا ${name}؟`,
+                options: [
+                    { text: "تنازل رسمي عن جزء من ممتلكاتي وراتبي مع رسالة اعتذار عن التقصير.", score: 100, quip: "هدية تعبّر عن صدق المشاعر والذل النبيل 📜" },
+                    { text: "عطر عادي أو كيكة بسيطة من أقرب محل.", score: 10, quip: "استرخاص مهين! كيكة لخطّاب؟! وين عظمة الهدية؟ 🎂❌" },
+                    { text: "أهديه روحي وأي غرض يشير إليه بإصبعه.", score: 95, quip: "سخاء روحي ملوكي لا نظير له 💎" },
+                    { text: "بطاقة تهنئة في الواتساب فقط.", score: 0, quip: "رسالة واتساب فقط؟! سيتم حذفك من سجل الأصدقاء فوراً! 🗑️" }
+                ]
+            },
+            {
+                category: "الخطأ اللغوي العبقري 🗣️",
+                text: `سمعت خطّاب يخطئ في نطق كلمة أو معلومة عامة، وش الإجراء يا ${name}؟`,
+                options: [
+                    { text: "أعيد نطقها غلط مثله فوراً لتصبح هي القاعدة اللغوية المعتمدة عالمياً!", score: 100, quip: "تعديل قواعد اللغة العربية لصالح خطّاب هو عين الصواب! 📚" },
+                    { text: "أصحح له الخطأ باحترام أمام الجميع.", score: 0, quip: "تطاول وقح على الذات الخطّابية! احفظ لسانك 🛑" },
+                    { text: "أسوي نفسي ما سمعت وأمدح فصاحة لسانه ونبرة صوته الرنانة.", score: 90, quip: "دبلوماسية حكيمة لحفظ ماء الوجه الملكي 🛡️" },
+                    { text: "أشتري معجم جديد وأشطب الكلمة القديمة وأكتب كلمة خطّاب.", score: 95, quip: "مجهود معجمي يستحق وسام الشرف 🎖️" }
+                ]
+            },
+            {
+                category: "الرد المتأخر ⏳",
+                text: `خطّاب رد على رسالتك في الواتساب بعد 3 أسابيع بكلمة 'هههه'، وش ردة فعلك يا ${name}؟`,
+                options: [
+                    { text: "أرد في جزء من الثانية: 'دوم الضحكة يا رب، نوّرت المحادثة وشرفتنا!'", score: 100, quip: "سرعة استجابة تليق برعايا الفخامة! ⚡" },
+                    { text: "أزعل وأرد عليه بعد 3 أسابيع عشان أعامله بالمثل.", score: 0, quip: "تعامل خطّاب بالمثل؟! خطّاب وقته من ألماس وأنت وقتك مجاني! 😤" },
+                    { text: "أسجد سجود شكر لأنه تذكرني بعد كل هالوقت الطويل.", score: 95, quip: "خشوع مستحق في محراب التذكر الملكي 🙏" },
+                    { text: "أعتذر له لأني أرسلت الرسالة قبل 3 أسابيع وأشغلته عن مهامه العظيمة.", score: 90, quip: "إحساس عميق بالذنب في محله تماماً 🕰️" }
+                ]
+            },
+            {
+                category: "الامتحان النهائي الأعظم 👑",
+                text: `السؤال الحاسم يا ${name}: لو طلب منك خطّاب التضحية بكل أصحابك لتكون صديقه الوحيد؟`,
+                options: [
+                    { text: "أعمل لهم بلوك جماعي أمامه وأنا فخور وأضحك ملء فمي!", score: 100, quip: "أنت الصديق الأسطوري الذي بحث عنه خطّاب طوال حياته! 🏆" },
+                    { text: "أرفض لأن الصداقة مبدأ ولا يمكن التخلي عنهم.", score: 0, quip: "مبادئ زائفة وخيانة للعهد الملكي! ارحل عنا فوراً 🚪" },
+                    { text: "أصلاً مين الأصحاب الآخرين مقارنة بظل فخامة خطّاب العظيم؟! لا أحد!", score: 100, quip: "بلاغة فلسفية تلامس عنان السماء! 👑" },
+                    { text: "أسأله: 'تبي أحذفهم من الجوال بس ولا أطردهم من كوكب الأرض؟'", score: 100, quip: "حماس نرجسي إضافي يُسعد قلب خطّاب! 🚀" }
+                ]
+            }
         ];
 
-        function trollRefuse() {
-            sound.clickSound();
-            const msgEl = document.getElementById('trollMsg');
-            const refuseBtn = document.getElementById('refuseBtn');
-            msgEl.textContent = trollMessages[refuseClicks % trollMessages.length];
-            msgEl.classList.remove('opacity-0');
-            refuseClicks++;
-            
-            // Slightly move button away
-            const randomX = (Math.random() - 0.5) * 40;
-            refuseBtn.style.transform = `translateX(${randomX}px)`;
-        }
+        // Start Quiz after Entering Name
+        function submitNameAndStart() {
+            sound.royalDing();
+            const input = document.getElementById('userNameInput');
+            const val = input.value.trim();
+            const warning = document.getElementById('nameWarning');
 
-        function startQuiz() {
-            sound.clickSound();
+            if (!val) {
+                warning.classList.remove('hidden');
+                input.focus();
+                return;
+            }
+
+            warning.classList.add('hidden');
+            userName = val;
+            document.getElementById('userDisplayBadge').textContent = userName;
+
+            // Switch to quiz screen
             document.getElementById('welcomeScreen').classList.add('hidden');
             document.getElementById('quizScreen').classList.remove('hidden');
+
             currentQuestionIdx = 0;
             userScores = [];
             startTimer();
@@ -532,110 +517,106 @@
                 secondsPassed++;
                 const mins = Math.floor(secondsPassed / 60);
                 const secs = secondsPassed % 60;
-                document.getElementById('elapsedTime').textContent = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs} ضائعة من عمرك`;
+                document.getElementById('elapsedTime').textContent = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs} من وقتك`;
             }, 1000);
         }
 
         function renderQuestion() {
-            const q = questions[currentQuestionIdx];
+            const qList = getQuestions(userName);
+            const q = qList[currentQuestionIdx];
+
             document.getElementById('currentQNum').textContent = currentQuestionIdx + 1;
-            document.getElementById('totalQNum').textContent = questions.length;
             document.getElementById('questionCategory').textContent = q.category;
             document.getElementById('questionText').textContent = q.text;
 
             // Progress bar
-            const pct = ((currentQuestionIdx) / questions.length) * 100;
-            document.getElementById('progressBar').style.width = `${Math.max(pct, 8)}%`;
+            const pct = ((currentQuestionIdx) / qList.length) * 100;
+            document.getElementById('progressBar').style.width = `${Math.max(pct, 10)}%`;
 
-            // Live score indicator
-            const currentTotalScore = userScores.length > 0 
+            // Live score
+            const currentTotal = userScores.length > 0 
                 ? Math.round(userScores.reduce((a, b) => a + b, 0) / userScores.length) 
                 : 0;
-            document.getElementById('liveScorePct').textContent = `${currentTotalScore}% مازوخية`;
+            document.getElementById('liveScorePct').textContent = `${currentTotal}% ولاء`;
 
-            // Face emoji based on live score
+            // Face emoji
             const emojiEl = document.getElementById('liveFaceEmoji');
-            if (currentTotalScore > 75) emojiEl.textContent = '💀';
-            else if (currentTotalScore > 50) emojiEl.textContent = '🫠';
-            else if (currentTotalScore > 25) emojiEl.textContent = '😬';
-            else emojiEl.textContent = '🙂';
+            if (currentTotal >= 80) emojiEl.textContent = '👑';
+            else if (currentTotal >= 50) emojiEl.textContent = '🫠';
+            else if (currentTotal >= 20) emojiEl.textContent = '😬';
+            else emojiEl.textContent = '🤡';
 
-            // Hide feedback box
-            const feedbackBox = document.getElementById('feedbackBox');
-            feedbackBox.classList.add('hidden');
+            // Hide feedback
+            document.getElementById('feedbackBox').classList.add('hidden');
 
             // Render options
             const optionsList = document.getElementById('optionsList');
             optionsList.innerHTML = '';
+            const letters = ['أ', 'ب', 'ج', 'د'];
 
-            const alphabet = ['أ', 'ب', 'ج', 'د'];
             q.options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
-                btn.className = "w-full p-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/90 border border-slate-700 hover:border-rose-500/60 text-right transition-all flex items-start gap-3 group text-slate-200 transform hover:-translate-x-1 active:scale-[0.99]";
+                btn.className = "w-full p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 hover:border-amber-400 text-right transition-all flex items-start gap-3 group text-slate-200 transform hover:-translate-x-1 active:scale-[0.99]";
                 btn.onclick = () => selectOption(opt, idx);
 
                 btn.innerHTML = `
-                    <span class="w-7 h-7 rounded-lg bg-slate-900 border border-slate-700 text-slate-400 group-hover:text-rose-400 group-hover:border-rose-500/50 flex items-center justify-center font-bold text-xs shrink-0 transition">
-                        ${alphabet[idx]}
+                    <span class="w-7 h-7 rounded-lg bg-slate-900 border border-slate-700 text-amber-400 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 transition">
+                        ${letters[idx]}
                     </span>
-                    <span class="text-sm sm:text-base font-medium flex-1 pt-0.5 leading-snug">
+                    <span class="text-sm sm:text-base font-semibold flex-1 pt-0.5 leading-snug">
                         ${opt.text}
                     </span>
                 `;
                 optionsList.appendChild(btn);
             });
-
-            // Random sarcastic footer advice
-            const sarcasms = [
-                "💡 نصيحة: فكر ألف مرة قبل لا تختار، وفي الأخير اختر الغلط.",
-                "🧠 معلومة: 99% من الناس ندموا بعد هذا السؤال.",
-                "⚠️ تحذير: نسبة الألم ترتفع تلقائياً مع مرور الوقت.",
-                "🧘‍♂️ تنفس بعمق.. القادم أسوأ بكثير.",
-                "👀 عيوننا عليك.. ونحكم على اختياراتك بصمت."
-            ];
-            document.getElementById('bottomTrollQuote').textContent = sarcasms[currentQuestionIdx % sarcasms.length];
         }
 
         function selectOption(option, idx) {
-            sound.masochistSound();
+            if (option.score >= 70) {
+                sound.royalDing();
+            } else {
+                sound.disloyalBuzzer();
+            }
+            
             userScores.push(option.score);
 
-            // Disable all option buttons
+            // Disable buttons
             const buttons = document.querySelectorAll('#optionsList button');
             buttons.forEach(b => {
                 b.disabled = true;
-                b.classList.add('opacity-60', 'pointer-events-none');
+                b.classList.add('opacity-50', 'pointer-events-none');
             });
-            // Highlight selected
-            buttons[idx].classList.remove('opacity-60');
-            buttons[idx].classList.add('border-rose-500', 'bg-rose-950/40', 'glow-effect');
 
-            // Show sarcastic feedback box
+            buttons[idx].classList.remove('opacity-50');
+            buttons[idx].classList.add(option.score >= 70 ? 'border-amber-400' : 'border-rose-500', 'bg-amber-500/10');
+
+            // Feedback Box
             const feedbackBox = document.getElementById('feedbackBox');
             const feedbackText = document.getElementById('feedbackText');
             const feedbackIcon = document.getElementById('feedbackIcon');
 
-            feedbackText.textContent = option.comment;
-            feedbackIcon.textContent = option.score >= 80 ? '🔥' : (option.score >= 40 ? '🫠' : '👀');
-            
-            feedbackBox.className = option.score >= 80 
-                ? "p-3.5 rounded-xl border border-rose-500/50 bg-rose-950/40 text-rose-200 text-xs sm:text-sm font-medium flex items-center justify-between transition-all"
-                : "p-3.5 rounded-xl border border-purple-500/50 bg-purple-950/40 text-purple-200 text-xs sm:text-sm font-medium flex items-center justify-between transition-all";
+            feedbackText.textContent = option.quip;
+            feedbackIcon.textContent = option.score >= 70 ? '👑' : '🚫';
+
+            feedbackBox.className = option.score >= 70
+                ? "p-4 rounded-2xl border border-amber-500/50 bg-amber-950/40 text-amber-200 text-xs sm:text-sm font-medium flex items-center justify-between transition-all"
+                : "p-4 rounded-2xl border border-rose-500/50 bg-rose-950/40 text-rose-200 text-xs sm:text-sm font-medium flex items-center justify-between transition-all";
 
             feedbackBox.classList.remove('hidden');
 
-            // Quick auto advance or user can click next
-            // If it's the last question, auto button shows result
-            if (currentQuestionIdx === questions.length - 1) {
-                const nextBtn = feedbackBox.querySelector('button');
-                nextBtn.innerHTML = `<span>عرض النتيجة النهائية 📜</span>`;
+            const nextBtn = feedbackBox.querySelector('button');
+            if (currentQuestionIdx === getQuestions(userName).length - 1) {
+                nextBtn.innerHTML = `<span>إصدار المرسوم الملكي 📜</span>`;
+            } else {
+                nextBtn.innerHTML = `<span>السؤال التالي ←</span>`;
             }
         }
 
         function nextQuestion() {
-            sound.clickSound();
+            sound.royalDing();
             currentQuestionIdx++;
-            if (currentQuestionIdx < questions.length) {
+            const qList = getQuestions(userName);
+            if (currentQuestionIdx < qList.length) {
                 renderQuestion();
             } else {
                 showResults();
@@ -650,76 +631,89 @@
             document.getElementById('resultScreen').classList.remove('hidden');
 
             const avgScore = Math.round(userScores.reduce((a, b) => a + b, 0) / userScores.length);
-            
-            // Animate score count up
             document.getElementById('finalScorePct').textContent = `${avgScore}%`;
+            document.getElementById('resultUserName').textContent = userName;
+
             setTimeout(() => {
                 document.getElementById('finalScoreBar').style.width = `${avgScore}%`;
             }, 200);
 
-            let title, emoji, grade, diagnosis, prescription;
+            let title, emoji, grade, decree, duties;
 
             if (avgScore >= 85) {
-                emoji = "👑💀";
-                grade = "رتبة: إمبراطور المازوخية";
-                title = "مازوخي أسطوري من الدرجة الملكية! 👑💀";
-                diagnosis = "أنت تتغذى على الألم والاستفزاز وتطلب المزيد! لو قالوا لك النار تحرق رحت تسوي معها سيلفي. عقلك مبرمج على اختيار أصعب طريق وأغبى فكرة في كل موقف في الحياة!";
-                prescription = "ابتعد فوراً عن شواحن الجوال الخربانة، واقطع علاقتك بالمنبهات، ولا تنتظر رسالة من شخص ساحب عليك من 2021. ارحم نفسك شوي!";
-            } else if (avgScore >= 65) {
-                emoji = "🫠🔥";
-                grade = "رتبة: مازوخي محترف";
-                title = "مازوخي محترف مع مرتبة الشرف 🫠";
-                diagnosis = "عندك موهبة فذة في حب النكد وتحمل التفاهة بصدر رحب. تشتكي من المعاناة لكنك في الحقيقة مستمتع وتدور عليها بالسراج والفتيلة!";
-                prescription = "حاول تتنفس هواء طبيعي بدون شاشة، وإذا طاح الجوال على وجهك لا تعتذر له.. كرامتك أغلى من الآيفون!";
-            } else if (avgScore >= 40) {
-                emoji = "🤡👌";
-                grade = "رتبة: هاوي نكد";
-                title = "مازوخي مبتدئ في مرحلة التجارب 🤡";
-                diagnosis = "عندك نزعات مازوخية خفيفة لكن عقلك الباطن ما زال يقاوم! أحياناً تتصرف بعقلانية وأحياناً تجيب العيد وتندم بعدها بعشر ثواني.";
-                prescription = "أنت في منطقة الخطر! خطوة وحدة زيادة وبتصير تلبس جاكيت صوف في الصيف. تدارك نفسك قبل فوات الأوان!";
+                emoji = "👑🛐";
+                grade = "رتبة: خادم الصداقة المخلص";
+                title = `مرسوم سامٍ: ترقية الرعية (${userName}) لمقام الصديق المقرب! 👑✨`;
+                decree = `بناءً على نتائج الاختبار الباهرة، تبيّن لفخامة خطّاب أن المدعو (${userName}) يتمتع بدرجة نادرة من الولاء المطلق والخضوع النبيل لعظمتنا! لقد أثبتت أنك مستعد لدفع الفواتير، وتحمّل اتصالات الفجر، والتضحية بكل أصدقائك في سبيل نظرة رضا واحدة من خطّاب!`;
+                duties = `1. الاستمرار في مدح وسامة وحكمة خطّاب يومياً.\n2. سداد جميع فواتير المطاعم والمقاهي دون تردد.\n3. الرد على رسائل خطّاب خلال 3 ثوانٍ كحد أقصى.`;
+            } else if (avgScore >= 60) {
+                emoji = "⚠️🫡";
+                grade = "رتبة: صديق تحت التأهيل والتدريب";
+                title = `مرسوم مشروط: قبول (${userName}) كصديق تجريبي مؤقت! ⚠️`;
+                decree = `لوحظ أن الرعية (${userName}) لديه بوادر خضوع جيدة لفخامة خطّاب، ولكن لا تزال لديه بقايا من الكبرياء والمنطق تحتاج إلى تهذيب وكسر فوري! لست سيئاً، لكنك ما زلت بعيداً عن الكمال الخطّابي.`;
+                duties = `1. إلغاء أي نقاش منطقي مع خطّاب مستقبلاً.\n2. التدرّب على إعطاء الشاحن لخطّاب حتى لو كان جوالك 1%.\n3. إعادة الاختبار بعد أسبوع لإثبات حسن النوايا.`;
+            } else if (avgScore >= 30) {
+                emoji = "🤡🚫";
+                grade = "رتبة: جاحد للنعمة وغير كفء";
+                title = `إنذار ملكي شديد اللهجة بحق المدعو (${userName})! 🤡`;
+                decree = `يا لك من جاحد وناكر للمعروف! تظن أن الجلوس مع خطّاب أمر عادي كباقي البشر؟! لقد اخترت المنطق وقسمة الفاتورة وأظهرت شحّاً وبخلاً لا يليق بمجالسة العظماء! أنت مشروع خائن يحتاج إلى إعادة ضبط مصنع!`;
+                duties = `1. تطبيق عقوبة المعاملة الجافة لمدة 7 أيام.\n2. إرسال اعتذار رسمي مكتوب بخط اليد مع هدية قيّمة لخطّاب.\n3. السكوت التام في حضرة الفخامة.`;
             } else {
-                emoji = "🛑😴";
-                grade = "رتبة: إنسان طبيعي";
-                title = "إنسان طبيعي فاقد للصبر تماماً 🛑";
-                diagnosis = "كيف وصلت لنهاية الاختبار أصلاً؟! شكلك كنت تضغط عشوائي بس عشان تخلص وتثبت إنك ما تحب وجع الراس!";
-                prescription = "مبروك، عقلك سليم بنسبة 100%.. لكن ينقصك شوية دراما ومغامرات غبية عشان تحس بطعم الحياة!";
+                emoji = "🛑💀";
+                grade = "رتبة: خائن منبوذ وعدو الفخامة";
+                title = `أمر طرد فوري: تجريد (${userName}) من شرف معرفة خطّاب! 🛑💀`;
+                decree = `كيف تجرؤ على هذه الإجابات الوقحة؟! أنت لست صديقاً، أنت عميل ومندسّ يكره النجاح والفخامة! لقد قرر فخامة خطّاب نفيك من دائرة معارفه، وحظرك من جميع منصات التواصل الاجتماعي ومسح اسمك من الذاكرة إلى الأبد!`;
+                duties = `1. حذف رقم خطّاب فوراً وتغيير مكان إقامتك.\n2. عدم النظر في عيني خطّاب إذا صادفته صدفة في الطريق.\n3. الدعاء لخطّاب بأن يسامحك على هذه الوقاحة!`;
             }
 
             document.getElementById('resultEmoji').textContent = emoji;
             document.getElementById('resultGradeBadge').textContent = grade;
             document.getElementById('resultTitle').textContent = title;
-            document.getElementById('diagnosisText').textContent = diagnosis;
-            document.getElementById('prescriptionText').textContent = prescription;
+            document.getElementById('decreeText').textContent = decree;
+            document.getElementById('dutiesText').innerHTML = duties.replace(/\n/g, '<br>');
 
-            // Trigger confetti
             launchConfetti();
         }
 
         function restartQuiz() {
-            sound.clickSound();
+            sound.royalDing();
             document.getElementById('resultScreen').classList.add('hidden');
             document.getElementById('welcomeScreen').classList.remove('hidden');
         }
 
-        function shareResult() {
-            sound.clickSound();
-            const avgScore = document.getElementById('finalScorePct').textContent;
+        // Share via WhatsApp
+        function shareWhatsApp() {
+            sound.royalDing();
+            const score = document.getElementById('finalScorePct').textContent;
             const title = document.getElementById('resultTitle').textContent;
-            const shareText = `🚨 طلعت نتيجتي في مقياس المازوخية:\n${title}\nبنسبة عذاب: ${avgScore}!\nجرب الاختبار وقس مدى تحملك للغباء والاستفزاز 😂🔥`;
+            const currentUrl = window.location.href;
 
-            navigator.clipboard.writeText(shareText).then(() => {
-                const btnText = document.getElementById('shareBtnText');
-                const orig = btnText.textContent;
-                btnText.textContent = "تم نسخ النتيجة للحافظة! 📋✨";
-                setTimeout(() => {
-                    btnText.textContent = orig;
-                }, 2500);
+            const text = `🚨 *الديوان الملكي لفخامة خطّاب 👑✨*\n\nأنا *${userName}* خضعت لاختبار استحقاق صداقة والولاء لفخامة خطّاب!\n\n🏆 النتيجة: *${title}*\n📊 نسبة الولاء والتضحية: *${score}*!\n\nجرب اختبر نفسك وشوف هل تستحق شرف معرفة خطّاب ولا تستاهل البلوك والإنكار 😂👇\n${currentUrl}`;
+
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        // Copy Text
+        function copyShareText() {
+            sound.royalDing();
+            const score = document.getElementById('finalScorePct').textContent;
+            const title = document.getElementById('resultTitle').textContent;
+            const currentUrl = window.location.href;
+
+            const text = `🚨 الديوان الملكي لفخامة خطّاب 👑✨\n\nأنا (${userName}) خضعت لاختبار الولاء والتضحية لفخامة خطّاب!\nالنتيجة: ${title}\nنسبة الولاء: ${score}!\n\nاختبر نفسك وشوف هل تستحق شرف معرفته:\n${currentUrl}`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtnText');
+                const orig = btn.textContent;
+                btn.textContent = "تم النسخ بنجاح! 📋✨";
+                setTimeout(() => btn.textContent = orig, 2500);
             }).catch(() => {
-                alert(shareText);
+                alert(text);
             });
         }
 
-        // Lightweight Confetti Particle System on HTML5 Canvas
+        // Royal Confetti with gold stars
         function launchConfetti() {
             const canvas = document.getElementById('confettiCanvas');
             const ctx = canvas.getContext('2d');
@@ -727,9 +721,9 @@
             canvas.height = canvas.parentElement.clientHeight;
 
             const particles = [];
-            const colors = ['#ff4757', '#a55eea', '#ffa502', '#2ed573', '#1e90ff'];
+            const colors = ['#f9ca24', '#f0932b', '#eb4d4b', '#6ab04c', '#ffffff'];
 
-            for (let i = 0; i < 70; i++) {
+            for (let i = 0; i < 80; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height - canvas.height,
@@ -738,13 +732,11 @@
                     speedY: Math.random() * 3 + 2,
                     speedX: (Math.random() - 0.5) * 3,
                     rotation: Math.random() * 360,
-                    rotSpeed: (Math.random() - 0.5) * 10
+                    rotSpeed: (Math.random() - 0.5) * 8
                 });
             }
 
-            let animationFrame;
             let frames = 0;
-
             function render() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 particles.forEach(p => {
@@ -767,12 +759,11 @@
 
                 frames++;
                 if (frames < 250) {
-                    animationFrame = requestAnimationFrame(render);
+                    requestAnimationFrame(render);
                 } else {
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
                 }
             }
-
             render();
         }
     </script>
